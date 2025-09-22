@@ -100,7 +100,7 @@ def print_banner():
 📅 Fecha: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
 {Colors.OKGREEN}🌟 Escribe 'ayuda' para ver los comandos o 'salir' para terminar.
 🎓 Prueba 'demo' para ver ejemplos de circuitos cuánticos!{Colors.ENDC}
-"""
+    """
     print(banner)
 
 
