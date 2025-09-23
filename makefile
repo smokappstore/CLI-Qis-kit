@@ -13,15 +13,15 @@ NC := \033[0m # No Color
 # Variables
 PYTHON := python3
 PIP := $(PYTHON) -m pip
-PROJECT_NAME := qiskit-runtime-cli
+PROJECT_NAME := CLI Qis-kit-
 
 help: ## Muestra esta ayuda
-	@echo "$(GREEN)Qiskit Runtime CLI - Comandos disponibles:$(NC)"
+	@echo "$(GREEN)Qiskit Runtime CLI Qis-kit - Comandos disponibles:$(NC)"
 	@echo ""
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "$(YELLOW)%-20s$(NC) %s\n", $$1, $$2}'
 
 install: ## Instalación completa (simulador + IBM Quantum)
-	@echo "$(GREEN)🚀 Instalando Qiskit Runtime CLI (completo)...$(NC)"
+	@echo "$(GREEN)🚀 Instalando Qiskit Runtime CLI Qis-kit (completo)...$(NC)"
 	$(PIP) install -r requirements.txt
 	@echo "$(GREEN)✅ Instalación completada$(NC)"
 
