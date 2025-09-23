@@ -23,7 +23,7 @@
 
 ## 🌟 Características Principales
 
-<div >
+
 - ✅ **Constructor de circuitos interactivo** - Crea circuitos cuánticos paso a paso
 - ✅ **Simulador local** - Funciona sin conexión a internet
 - ✅ **Hardware cuántico real** - Conexión a IBM Quantum (opcional)
@@ -31,7 +31,7 @@
 - ✅ **Visualizaciones** - Gráficos y histogramas automáticos
 - ✅ **Interfaz colorizada** - Experiencia visual mejorada
 - ✅ **Instalación automática** - Setup guiado y verificación de dependencias
-</div>
+
 
 ## 🚀 Instalación Rápida
 
