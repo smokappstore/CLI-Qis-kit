@@ -39,8 +39,8 @@
 
 ```bash
 # Clona el repositorio
-git clone https://github.com/smokapp/qiskit-runtime-cli.git
-cd qiskit-runtime-cli
+git clone https://github.com/smokapp/CLI-Qis-kit.git
+cd CLIQis-kit
 
 # Ejecuta el instalador automático
 python install.py
