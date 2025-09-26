@@ -40,7 +40,7 @@
 ```bash
 # Clona el repositorio
 git clone https://github.com/smokapp/CLI-Qis-kit.git
-cd CLIQis-kit
+cd CLI-Qis-kit
 
 # Ejecuta el instalador automático
 python install.py
