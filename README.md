@@ -5,7 +5,6 @@
 
 </div>
 
-<img width="1100" height="506" alt="cliqis" src="https://github.com/user-attachments/assets/24b4ec52-5678-4a64-a673-4de48eb5a5fa" />
 
 <div align="center">
 
