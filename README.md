@@ -66,7 +66,7 @@ make help
 make install
 
 # Ejecutar
-make run
+make run-installer  # Ejecuta python install.py
 ```
 
 ## 📦 Requisitos del Sistema
@@ -279,8 +279,8 @@ El comando `demo` incluye tutoriales interactivos sobre:
 
 ```bash
 # Clona el repositorio
-git clone https://github.com/smokapp/qiskit-runtime-cli.git
-cd qiskit-runtime-cli
+git clone https://github.com/smokapp/CLI-Qis-kit.git
+cd  CLI-Qis-kit
 
 # Configura entorno de desarrollo
 make install-dev
@@ -331,6 +331,7 @@ make lint             # Verificar código
 make check-deps       # Verificar dependencias
 make info             # Información del proyecto
 make status           # Estado completo del proyecto
+make run-installer    # Ejecuta python install.py
 ```
 
 ## ❓ Preguntas Frecuentes
@@ -366,7 +367,7 @@ Este proyecto está licenciado bajo la **Apache License 2.0**. Ver el archivo `L
 
 ## 📞 Soporte
 
-- **Issues**: [GitHub Issues](https://github.com/smokappstore/CLI-Qis-kit-/issues)
+- **Issues**: [GitHub Issues](https://github.com/smokappstore/CLI-Qis-kit/issues)
 - **Email**: jakocrazykings@gmail.com
 - **Documentación**: Este README.md
 
