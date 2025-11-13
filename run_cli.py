@@ -604,7 +604,7 @@ class QiskitCLI:
         if not args or args[0].lower() == 'all':
             # Medir todos los qubits en bits clásicos correspondientes
             if self.current_circuit.num_clbits < self.current_circuit.num_qubits:
-                self.current_circuit.add_bits(self.current_circuit.num_qubits - self.current_circuit.num_clbits)
+                self.current_circuit.add_clbits(self.current_circuit.num_qubits - self.current_circuit.num_clbits)
             self.current_circuit.measure_all()
             print(f"{Colors.OKGREEN}✅ Medición añadida para todos los {self.current_circuit.num_qubits} qubits.{Colors.ENDC}")
         else:
@@ -614,11 +614,14 @@ class QiskitCLI:
                 if max_q >= self.current_circuit.num_qubits:
                     print(f"{Colors.FAIL}Error: Qubit {max_q} fuera de rango.{Colors.ENDC}")
                     return
-                # Añadir bits clásicos si es necesario
-                if self.current_circuit.num_clbits < len(qubits_to_measure):
-                     self.current_circuit.add_bits(len(qubits_to_measure) - self.current_circuit.num_clbits)
                 
-                self.current_circuit.measure(qubits_to_measure, range(len(qubits_to_measure)))
+                # Add classical bits if necessary, ensuring a 1-to-1 mapping
+                required_clbits = max_q + 1
+                if self.current_circuit.num_clbits < required_clbits:
+                    self.current_circuit.add_clbits(required_clbits - self.current_circuit.num_clbits)
+
+                # Measure each qubit to its corresponding classical bit
+                self.current_circuit.measure(qubits_to_measure, qubits_to_measure)
                 print(f"{Colors.OKGREEN}✅ Medición añadida para qubits {qubits_to_measure}.{Colors.ENDC}")
 
             except ValueError:
@@ -699,6 +702,13 @@ class QiskitCLI:
             print(f"{Colors.OKBLUE}🗑️ Circuito actual eliminado.{Colors.ENDC}")
         else:
             print(f"{Colors.WARNING}No hay ningún circuito activo para eliminar.{Colors.ENDC}")
+
+    def add_gate_to_circuit(self, args: List[str]):
+        """Añade una puerta cuántica al circuito actual."""
+        if not self.current_circuit:
+            print(f"{Colors.WARNING}⚠️ No hay ningún circuito activo. Usa `crear <num_qubits>` primero.{Colors.ENDC}")
+            return
+        super().add_gate_to_circuit(args)
 
     def _show_interactive_help(self):
         """Muestra la ayuda para los comandos interactivos."""
