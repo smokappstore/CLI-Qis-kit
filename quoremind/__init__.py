@@ -1,0 +1,1 @@
+"""QuoreMind Quoremind module."""
